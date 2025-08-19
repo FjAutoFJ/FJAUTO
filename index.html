@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>FJ Auto — Venta de autos en Puerto Rico</title>
+  <meta name="description" content="FJ Auto: Inventario seleccionado, trato directo y claro. Atención rápida. Tu próximo carro sin dificultades.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="icon" href="images/logo.png" type="image/png">
+  <meta property="og:title" content="FJ Auto — Venta de autos en Puerto Rico">
+  <meta property="og:description" content="Inventario seleccionado, trato directo y claro. Atención rápida. Tu próximo carro sin dificultades.">
+  <meta property="og:image" content="images/logo.png">
+  <meta name="theme-color" content="#0b0f14">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "AutoDealer",
+    "name": "FJ Auto",
+    "image": "images/logo.png",
+    "email": "fjautofj@gmail.com",
+    "address": {
+      "@type": "PostalAddress",
+      "addressRegion": "PR",
+      "addressCountry": "US"
+    },
+    "description": "Venta de autos en Puerto Rico. Inventario seleccionado, trato directo y claro."
+  }
+  </script>
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="#inicio" aria-label="FJ Auto - Inicio">
+        <img src="images/logo.png" alt="Logo de FJ Auto" class="logo">
+        <span class="brand-text">FJ Auto</span>
+      </a>
+      <button class="menu-toggle" aria-expanded="false" aria-controls="nav">Menú</button>
+      <nav id="nav" class="nav" aria-label="principal">
+        <a href="#sobre">Sobre Nosotros</a>
+        <a href="#contacto">Contacto</a>
+        <a href="#redes">Redes</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="inicio">
+    <section class="hero">
+      <div class="container hero-inner">
+        <h1>Venta de autos en Puerto Rico</h1>
+        <p class="tagline">Inventario seleccionado, trato directo y claro.</p>
+        <p class="bullets">
+          <span>Autos confiables</span>
+          <span>Atención rápida</span>
+          <span>Tu próximo carro sin dificultades</span>
+        </p>
+        <div class="cta-row">
+          <a class="btn primary" href="#contacto">Contáctanos</a>
+          <a class="btn ghost" href="#sobre">Conócenos</a>
+        </div>
+      </div>
+      <div class="hero-gradient" aria-hidden="true"></div>
+    </section>
+
+    <section id="sobre" class="section about">
+      <div class="container grid-2">
+        <div>
+          <h2>Sobre FJ Auto</h2>
+          <p>En <strong>FJ Auto</strong> nos enfocamos en una experiencia de compra sencilla y transparente.
+             Nuestro inventario es <em>seleccionado</em> y cada vehículo es evaluado para tu tranquilidad.
+             Hablamos claro, respondemos rápido y te acompañamos en cada paso.</p>
+          <ul class="list-check">
+            <li>Proceso simple y sin presión</li>
+            <li>Comunicación directa</li>
+            <li>Confianza y responsabilidad</li>
+          </ul>
+        </div>
+        <div class="card">
+          <h3>Misión</h3>
+          <p>Conectar a nuestros clientes con autos confiables a un precio justo,
+             con un servicio honesto y eficiente.</p>
+          <h3>Visión</h3>
+          <p>Ser la alternativa preferida en Puerto Rico para comprar autos con
+             un trato de primera y sin complicaciones.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="redes" class="section socials">
+      <div class="container">
+        <h2>Síguenos</h2>
+        <div class="socials-row">
+          <a class="social" href="https://www.facebook.com/profile.php?id=61579701179033" target="_blank" rel="noopener">Facebook</a>
+          <a class="social" href="https://instagram.com/FJAutoFJ" target="_blank" rel="noopener">Instagram</a>
+          <a class="social" href="mailto:fjautofj@gmail.com">fjautofj@gmail.com</a>
+        </div>
+      </div>
+    </section>
+
+    <section id="contacto" class="section contact">
+      <div class="container grid-2">
+        <div>
+          <h2>Contacto</h2>
+          <p>¿Listo para tu próximo carro? Escríbenos y con gusto te ayudamos.</p>
+          <ul class="contact-list">
+            <li><strong>Email:</strong> <a href="mailto:fjautofj@gmail.com">fjautofj@gmail.com</a></li>
+            <li><strong>Facebook:</strong> <a href="https://www.facebook.com/profile.php?id=61579701179033" target="_blank" rel="noopener">FJ Auto</a></li>
+            <li><strong>Instagram:</strong> <a href="https://instagram.com/FJAutoFJ" target="_blank" rel="noopener">@FJAutoFJ</a></li>
+          </ul>
+        </div>
+        <form class="contact-form" onsubmit="return sendEmail(event)">
+          <label for="name">Nombre</label>
+          <input id="name" name="name" type="text" placeholder="Tu nombre" required>
+          <label for="msg">Mensaje</label>
+          <textarea id="msg" name="msg" rows="5" placeholder="¿Qué carro buscas? ¿Cómo te podemos ayudar?" required></textarea>
+          <button class="btn primary" type="submit">Enviar por correo</button>
+          <p class="form-hint">Se abrirá tu aplicación de correo con el mensaje listo.</p>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <span>© <span id="year"></span> FJ Auto — Puerto Rico</span>
+      <a href="#inicio" class="to-top" aria-label="Volver arriba">↑ Arriba</a>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
